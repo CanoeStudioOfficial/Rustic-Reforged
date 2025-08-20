@@ -367,9 +367,9 @@ public class BlockCandleDouble extends BlockBase {
 			final double candleOffset = 0.23125;
 			
 			EnumFacing enumfacing1 = enumfacing.getOpposite();
-			d0 += 0.2609375D * enumfacing1.getFrontOffsetX();
+			d0 += 0.2609375D * enumfacing1.getXOffset();
 			d1 += 0.25D;
-			d2 += 0.2609375D * enumfacing1.getFrontOffsetZ();
+			d2 += 0.2609375D * enumfacing1.getXOffset();
 			
 			if (isFacingX) {
 				worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0, d1, d2 + candleOffset, 0.0D, 0.0D, 0.0D);

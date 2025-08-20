@@ -12,7 +12,7 @@ public class ItemFoodBase extends ItemFood {
 	public ItemFoodBase(String name, int hunger, float saturation, boolean wolfFood) {
 		super(hunger, saturation, wolfFood);
 		setRegistryName(name);
-		setUnlocalizedName(Rustic.MODID + "." + name);
+		setTranslationKey(Rustic.MODID + "." + name);
 		setCreativeTab(Rustic.farmingTab);
 		GameRegistry.findRegistry(Item.class).register(this);
 		initFood();

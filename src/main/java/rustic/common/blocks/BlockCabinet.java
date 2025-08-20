@@ -177,7 +177,7 @@ public class BlockCabinet extends BlockRotatable implements ITileEntityProvider 
 	public IBlockState getStateFromMeta(int meta) {
 		IBlockState state = this.getDefaultState().withProperty(MIRROR, (meta & 4) > 0);
 		state = state.withProperty(TOP, (meta & 8) > 0);
-		return state.withProperty(FACING, EnumFacing.getFront(5 - (meta & 3)));
+		return state.withProperty(FACING, EnumFacing.byIndex(5 - (meta & 3)));
 	}
 
 	public int getMetaFromState(IBlockState state) {

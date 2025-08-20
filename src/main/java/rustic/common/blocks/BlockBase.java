@@ -15,7 +15,7 @@ public class BlockBase extends Block {
 	public BlockBase(Material mat, String name) {
 		super(mat);
 		setRegistryName(name);
-		setUnlocalizedName(Rustic.MODID + "." + name);
+		setTranslationKey(Rustic.MODID + "." + name);
 		register();
 		setHardness(1F);
 		setCreativeTab(Rustic.decorTab);
@@ -24,7 +24,7 @@ public class BlockBase extends Block {
 	public BlockBase(Material mat, String name, boolean register) {
 		super(mat);
 		setRegistryName(name);
-		setUnlocalizedName(Rustic.MODID + "." + name);
+		setTranslationKey(Rustic.MODID + "." + name);
 		setHardness(1F);
 		setCreativeTab(Rustic.decorTab);
 		if (register) {

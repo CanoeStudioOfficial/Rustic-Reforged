@@ -92,7 +92,7 @@ public class BlockLantern extends BlockBase {
 	public IBlockState getStateFromMeta(int meta)
     {
         IBlockState iblockstate = this.getDefaultState();
-        iblockstate = iblockstate.withProperty(FACING, EnumFacing.getFront(meta));
+        iblockstate = iblockstate.withProperty(FACING, EnumFacing.byIndex(meta));
         return iblockstate;
     }
 

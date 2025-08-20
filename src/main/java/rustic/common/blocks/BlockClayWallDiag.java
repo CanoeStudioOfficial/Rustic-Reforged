@@ -28,7 +28,7 @@ public class BlockClayWallDiag extends BlockBase implements IAdvancedRotationPla
 	}
 
 	public IBlockState getStateFromMeta(int meta) {
-		return this.getDefaultState().withProperty(FACING, EnumFacing.getHorizontal(meta));
+		return this.getDefaultState().withProperty(FACING, EnumFacing.byHorizontalIndex(meta));
 	}
 
 	public int getMetaFromState(IBlockState state) {

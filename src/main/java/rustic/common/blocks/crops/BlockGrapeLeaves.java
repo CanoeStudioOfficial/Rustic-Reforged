@@ -316,7 +316,7 @@ public class BlockGrapeLeaves extends BlockRopeBase implements IGrowable, IColor
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public BlockRenderLayer getBlockLayer() {
+	public BlockRenderLayer getRenderLayer() {
 		return BlockRenderLayer.CUTOUT;
 	}
 	

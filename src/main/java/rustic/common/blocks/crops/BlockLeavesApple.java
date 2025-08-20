@@ -56,7 +56,7 @@ public class BlockLeavesApple extends BlockLeaves implements IColoredBlock, IGro
 	public BlockLeavesApple() {
 		super();
 		setRegistryName("leaves_apple");
-		setUnlocalizedName(Rustic.MODID + "." + "leaves_apple");
+		setTranslationKey(Rustic.MODID + "." + "leaves_apple");
 		setCreativeTab(Rustic.farmingTab);
 		setDefaultState(this.blockState.getBaseState().withProperty(AGE, 0).withProperty(CHECK_DECAY, true)
 				.withProperty(DECAYABLE, true));
@@ -214,7 +214,7 @@ public class BlockLeavesApple extends BlockLeaves implements IColoredBlock, IGro
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public BlockRenderLayer getBlockLayer() {
+	public BlockRenderLayer getRenderLayer() {
 		return BlockRenderLayer.CUTOUT_MIPPED;
 	}
 

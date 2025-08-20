@@ -55,7 +55,7 @@ public class BlockRetort extends BlockBase {
 	
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
-		return this.getDefaultState().withProperty(FACING, EnumFacing.getFront(5 - (meta & 3)));
+		return this.getDefaultState().withProperty(FACING, EnumFacing.byIndex(5 - (meta & 3)));
 	}
 
 	@Override

@@ -67,7 +67,7 @@ public class ItemFluidBottle extends ItemFluidContainer implements IColoredItem 
 	public ItemFluidBottle() {
 		super(1000);
 		setRegistryName("fluid_bottle");
-		setUnlocalizedName(Rustic.MODID + "." + "fluid_bottle");
+		setTranslationKey(Rustic.MODID + "." + "fluid_bottle");
 		setCreativeTab(Rustic.farmingTab);
 		GameRegistry.findRegistry(Item.class).register(this);
 		empty = new ItemStack(Items.GLASS_BOTTLE);
@@ -225,7 +225,7 @@ public class ItemFluidBottle extends ItemFluidContainer implements IColoredItem 
 			return empty.getDisplayName();
 		}
 
-		String unloc = this.getUnlocalizedName(stack);
+		String unloc = this.getTranslationKey(stack);
 
 		return I18n.translateToLocalFormatted(unloc + ".name", fluidStack.getLocalizedName());
 	}

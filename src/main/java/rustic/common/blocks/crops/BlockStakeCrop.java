@@ -49,7 +49,7 @@ public class BlockStakeCrop extends BlockBase implements IGrowable, IPlantable {
 		}
 
 		@Override
-		public EnumPushReaction getMobilityFlag() {
+		public EnumPushReaction getPushReaction() {
 			return EnumPushReaction.BLOCK;
 		}
 	};
@@ -105,7 +105,7 @@ public class BlockStakeCrop extends BlockBase implements IGrowable, IPlantable {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public BlockRenderLayer getBlockLayer() {
+	public BlockRenderLayer getRenderLayer() {
 		return BlockRenderLayer.CUTOUT;
 	}
 

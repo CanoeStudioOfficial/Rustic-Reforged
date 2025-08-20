@@ -60,7 +60,7 @@ public class Rustic {
 
 		@Override
 		@SideOnly(Side.CLIENT)
-		public ItemStack getTabIconItem() {
+		public ItemStack createIcon() {
 			return new ItemStack(ModBlocks.VASE);
 		}
 	};
@@ -73,7 +73,7 @@ public class Rustic {
 
 		@Override
 		@SideOnly(Side.CLIENT)
-		public ItemStack getTabIconItem() {
+		public ItemStack createIcon() {
 			return new ItemStack(ModItems.OLIVES);
 		}
 
@@ -113,7 +113,7 @@ public class Rustic {
 
 		@Override
 		@SideOnly(Side.CLIENT)
-		public ItemStack getTabIconItem() {
+		public ItemStack createIcon() {
 			return ModItems.ELIXIR.getDefaultInstance();
 		}
 	};

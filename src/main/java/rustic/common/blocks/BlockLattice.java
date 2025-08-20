@@ -137,7 +137,7 @@ public class BlockLattice extends BlockBase implements IColoredBlock {
 	public IBlockState getExtendedState(IBlockState state, IBlockAccess world, BlockPos pos) {
 		IExtendedBlockState extendedState = (IExtendedBlockState) state;
 		for (int i = 0; i < CONNECTIONS.length; i++) {
-			boolean connected = canConnectTo(world, pos, EnumFacing.getFront(i));
+			boolean connected = canConnectTo(world, pos, EnumFacing.byIndex(i));
 			extendedState = extendedState.withProperty(CONNECTIONS[i], connected);
 		}
 		return extendedState;

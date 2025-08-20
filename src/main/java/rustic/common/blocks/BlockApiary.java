@@ -100,7 +100,7 @@ public class BlockApiary extends BlockBase implements ITileEntityProvider {
 	}
 
 	public IBlockState getStateFromMeta(int meta) {
-		return this.getDefaultState().withProperty(FACING, EnumFacing.getHorizontal(meta));
+		return this.getDefaultState().withProperty(FACING, EnumFacing.byHorizontalIndex(meta));
 	}
 
 	public int getMetaFromState(IBlockState state) {

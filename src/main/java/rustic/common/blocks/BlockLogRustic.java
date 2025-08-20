@@ -31,13 +31,13 @@ public class BlockLogRustic extends BlockLog {
 	public BlockLogRustic() {
 		super();
 		setRegistryName("log");
-		setUnlocalizedName(Rustic.MODID + "." + "log");
+		setTranslationKey(Rustic.MODID + "." + "log");
 		setCreativeTab(Rustic.farmingTab);
 		ItemBlock item = new ItemBlock(this) {
 			@Override
-			public String getUnlocalizedName(ItemStack stack) {
+			public String getTranslationKey(ItemStack stack) {
 				IBlockState state = BlockLogRustic.this.getStateFromMeta(stack.getMetadata());
-				return getUnlocalizedName() + "_" + state.getValue(BlockPlanksRustic.VARIANT);
+				return getTranslationKey() + "_" + state.getValue(BlockPlanksRustic.VARIANT);
 			}
 
 			@Override

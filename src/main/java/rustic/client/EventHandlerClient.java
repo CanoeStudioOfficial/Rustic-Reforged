@@ -491,7 +491,7 @@ public class EventHandlerClient {
 				int width = event.getResolution().getScaledWidth();
 				int height = event.getResolution().getScaledHeight();
 				GuiIngame gui = Minecraft.getMinecraft().ingameGUI;
-				Minecraft.getMinecraft().mcProfiler.startSection("armor");
+				Minecraft.getMinecraft().profiler.startSection("armor");
 				Minecraft.getMinecraft().getTextureManager().bindTexture(Gui.ICONS);
 				GlStateManager.enableBlend();
 
@@ -526,7 +526,7 @@ public class EventHandlerClient {
 
 				Minecraft.getMinecraft().getTextureManager().bindTexture(Gui.ICONS);
 				GlStateManager.disableBlend();
-				Minecraft.getMinecraft().mcProfiler.endSection();
+				Minecraft.getMinecraft().profiler.endSection();
 			}
 		}
 	}

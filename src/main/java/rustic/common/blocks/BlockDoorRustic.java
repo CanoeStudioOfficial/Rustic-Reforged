@@ -31,13 +31,13 @@ public class BlockDoorRustic extends BlockDoor {
 	protected BlockDoorRustic(Material materialIn, String name) {
 		super(materialIn);
 		setRegistryName(name);
-		setUnlocalizedName(Rustic.MODID + "." + name);
+		setTranslationKey(Rustic.MODID + "." + name);
 		setCreativeTab(Rustic.decorTab);
 		Item item = new ItemDoor(this) {
 
 		}.setCreativeTab(Rustic.decorTab);
 		item.setRegistryName(this.getRegistryName());
-		item.setUnlocalizedName(this.getUnlocalizedName());
+		item.setTranslationKey(this.getTranslationKey());
 		GameRegistry.findRegistry(Block.class).register(this);
 		GameRegistry.findRegistry(Item.class).register(item);
 		this.item = item;

@@ -77,7 +77,7 @@ public class BlockRope extends BlockRopeBase {
 	}
 
 	@Override
-	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+	public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
 		if (!worldIn.isRemote) {
 			if (entityIn instanceof EntityArrow && isArrowInAABB(worldIn, pos, state, (EntityArrow) entityIn)) {
 				this.dropBlock(worldIn, pos, state);

@@ -15,7 +15,7 @@ public class ItemColorCache implements IResourceManagerReloadListener {
 	protected final Map<String, Integer> itemColors = new HashMap<String, Integer>();
 	
 	public int getColor(ItemStack stack) {
-		String itemKey = stack.getItem().getUnlocalizedName() + "@" + stack.getItemDamage();
+		String itemKey = stack.getItem().getTranslationKey() + "@" + stack.getItemDamage();
 		
 		if (!this.itemColors.containsKey(itemKey)) {
 			this.itemColors.put(itemKey, ClientUtils.getItemColor(stack));

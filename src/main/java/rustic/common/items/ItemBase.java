@@ -11,7 +11,7 @@ public class ItemBase extends Item {
 	public ItemBase(String name){
 		super();
 		setRegistryName(name);
-		setUnlocalizedName(Rustic.MODID + "." + name);
+		setTranslationKey(Rustic.MODID + "." + name);
 		setCreativeTab(Rustic.farmingTab);
 		GameRegistry.findRegistry(Item.class).register(this);
 	}

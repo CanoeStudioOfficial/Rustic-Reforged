@@ -35,9 +35,9 @@ public class BlockPlanksRustic extends BlockBase {
 
 		ItemBlock item = new ItemBlock(this) {
 			@Override
-			public String getUnlocalizedName(ItemStack stack) {
+			public String getTranslationKey(ItemStack stack) {
 				IBlockState state = BlockPlanksRustic.this.getStateFromMeta(stack.getMetadata());
-				return getUnlocalizedName() + "_" + state.getValue(BlockPlanksRustic.VARIANT);
+				return getTranslationKey() + "_" + state.getValue(BlockPlanksRustic.VARIANT);
 			}
 
 			@Override

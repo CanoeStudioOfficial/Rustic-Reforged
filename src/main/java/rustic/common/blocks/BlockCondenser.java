@@ -106,14 +106,14 @@ public class BlockCondenser extends BlockBase implements ITileEntityProvider {
 	}
 	
 	@Override
-	public EnumPushReaction getMobilityFlag(IBlockState state) {
+	public EnumPushReaction getPushReaction(IBlockState state) {
 		return EnumPushReaction.BLOCK;
     }
 
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		IBlockState state = this.getDefaultState().withProperty(BOTTOM, (meta & 4) > 0);
-		return state.withProperty(FACING, EnumFacing.getFront(5 - (meta & 3)));
+		return state.withProperty(FACING, EnumFacing.byIndex(5 - (meta & 3)));
 	}
 
 	@Override

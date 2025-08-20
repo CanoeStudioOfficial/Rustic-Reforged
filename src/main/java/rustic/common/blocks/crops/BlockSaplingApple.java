@@ -40,7 +40,7 @@ public class BlockSaplingApple extends BlockBush implements IGrowable {
 	public BlockSaplingApple() {
 		super();
 		setRegistryName("sapling_apple");
-		setUnlocalizedName(Rustic.MODID + "." + "sapling_apple");
+		setTranslationKey(Rustic.MODID + "." + "sapling_apple");
 		GameRegistry.findRegistry(Block.class).register(this);
 		GameRegistry.findRegistry(Item.class).register(new ItemBlock(this).setRegistryName(getRegistryName()));
 		setCreativeTab(Rustic.farmingTab);

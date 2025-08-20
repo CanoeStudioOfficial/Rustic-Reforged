@@ -17,7 +17,7 @@ public class BlockStairsBase extends BlockStairs {
 		//super(mat);
 		this.setLightOpacity(0);
 		setRegistryName(name);
-		setUnlocalizedName(Rustic.MODID + "." + name);
+		setTranslationKey(Rustic.MODID + "." + name);
 		GameRegistry.findRegistry(Block.class).register(this);
 		GameRegistry.findRegistry(Item.class).register(new ItemBlock(this).setRegistryName(getRegistryName()));
 		this.setCreativeTab(Rustic.decorTab);

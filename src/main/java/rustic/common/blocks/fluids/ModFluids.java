@@ -355,7 +355,7 @@ public class ModFluids {
 
 		BLOCK_HONEY = new BlockFluidRustic("honey", HONEY, Material.WATER) {
 			@Override
-			public void onEntityCollidedWithBlock(World world, BlockPos pos, IBlockState state, Entity entity) {
+			public void onEntityCollision(World world, BlockPos pos, IBlockState state, Entity entity) {
 				entity.motionX *= 0.5F;
 				entity.motionY *= 0.5F;
 				entity.motionZ *= 0.5F;
@@ -365,7 +365,7 @@ public class ModFluids {
 		
 		BLOCK_GOLDEN_APPLE_JUICE = new BlockFluidRustic("golden_apple_juice", GOLDEN_APPLE_JUICE, Material.WATER) {
 			@Override
-			public void onEntityCollidedWithBlock(World world, BlockPos pos, IBlockState state, Entity entity) {
+			public void onEntityCollision(World world, BlockPos pos, IBlockState state, Entity entity) {
 				if ((entity != null) && (entity instanceof EntityLivingBase) && ((entity.ticksExisted % 10) == 0)) {
 					EntityLivingBase e = (EntityLivingBase) entity;
 					e.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 100, 0, true, true));

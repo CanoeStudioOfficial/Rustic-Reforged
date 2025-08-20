@@ -45,13 +45,13 @@ public class BlockSaplingRustic extends BlockBush implements IGrowable {
 	public BlockSaplingRustic() {
 		super();
 		setRegistryName("sapling");
-		setUnlocalizedName(Rustic.MODID + "." + "sapling");
+		setTranslationKey(Rustic.MODID + "." + "sapling");
 		setCreativeTab(Rustic.farmingTab);
 		ItemBlock item = new ItemBlock(this) {
 			@Override
-			public String getUnlocalizedName(ItemStack stack) {
+			public String getTranslationKey(ItemStack stack) {
 				IBlockState state = BlockSaplingRustic.this.getStateFromMeta(stack.getMetadata());
-				return getUnlocalizedName() + "_" + state.getValue(BlockPlanksRustic.VARIANT);
+				return getTranslationKey() + "_" + state.getValue(BlockPlanksRustic.VARIANT);
 			}
 
 			@Override

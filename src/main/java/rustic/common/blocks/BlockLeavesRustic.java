@@ -53,13 +53,13 @@ public class BlockLeavesRustic extends BlockLeaves implements IColoredBlock {
 	public BlockLeavesRustic() {
 		super();
 		setRegistryName("leaves");
-		setUnlocalizedName(Rustic.MODID + "." + "leaves");
+		setTranslationKey(Rustic.MODID + "." + "leaves");
 		setCreativeTab(Rustic.farmingTab);
 		ItemBlock item = new ItemBlock(this) {
 			@Override
-			public String getUnlocalizedName(ItemStack stack) {
+			public String getTranslationKey(ItemStack stack) {
 				IBlockState state = BlockLeavesRustic.this.getStateFromMeta(stack.getMetadata());
-				return getUnlocalizedName() + "_" + state.getValue(BlockPlanksRustic.VARIANT);
+				return getTranslationKey() + "_" + state.getValue(BlockPlanksRustic.VARIANT);
 			}
 
 			@Override
@@ -187,8 +187,8 @@ public class BlockLeavesRustic extends BlockLeaves implements IColoredBlock {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public BlockRenderLayer getBlockLayer() {
-		return Blocks.LEAVES.getBlockLayer();
+	public BlockRenderLayer getRenderLayer () {
+		return Blocks.LEAVES.getRenderLayer();
 	}
 
 	@Override

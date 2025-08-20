@@ -94,8 +94,8 @@ public class LatticeModel implements IModel {
 
 		@Override
 		public boolean accepts(ResourceLocation modelLocation) {
-			return modelLocation.getResourceDomain().equals(Rustic.MODID)
-					&& modelLocation.getResourcePath().equals("iron_lattice");
+			return modelLocation.getNamespace().equals(Rustic.MODID)
+					&& modelLocation.getPath().equals("iron_lattice");
 		}
 
 		@Override

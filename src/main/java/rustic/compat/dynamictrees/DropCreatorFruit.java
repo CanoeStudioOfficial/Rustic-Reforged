@@ -23,7 +23,7 @@ public class DropCreatorFruit extends DropCreator {
 	private final int chance;
 	
 	public DropCreatorFruit(Item item, int chance) {
-		super(new ResourceLocation(Rustic.MODID, item.getRegistryName().getResourcePath()));
+		super(new ResourceLocation(Rustic.MODID, item.getRegistryName().getPath()));
 		this.fruit = item;
 		this.chance = chance;
 	}

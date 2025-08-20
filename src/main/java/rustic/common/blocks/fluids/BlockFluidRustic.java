@@ -28,7 +28,7 @@ public class BlockFluidRustic extends BlockFluidClassic {
 	public BlockFluidRustic(String name, Fluid fluid, Material material) {
 		super(fluid, material);
 		setRegistryName(name);
-		setUnlocalizedName(Rustic.MODID + "." + name);
+		setTranslationKey(Rustic.MODID + "." + name);
 		GameRegistry.findRegistry(Block.class).register(this);
 		GameRegistry.findRegistry(Item.class).register(new ItemBlock(this).setRegistryName(getRegistryName()));
 		fluid.setBlock(this);

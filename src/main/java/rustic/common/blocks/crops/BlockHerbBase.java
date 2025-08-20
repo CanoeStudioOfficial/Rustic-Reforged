@@ -43,7 +43,7 @@ public abstract class BlockHerbBase extends BlockBush implements IGrowable, IPla
 	public BlockHerbBase(String name, boolean hasItemBlock) {
 		super();
 		setRegistryName(name);
-		setUnlocalizedName(Rustic.MODID + "." + name);
+		setTranslationKey(Rustic.MODID + "." + name);
 		GameRegistry.findRegistry(Block.class).register(this);
 		if (!hasItemBlock) {
 			GameRegistry.findRegistry(Item.class).register(new ItemHerbBase(this).setRegistryName(getRegistryName()));

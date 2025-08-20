@@ -166,7 +166,7 @@ public abstract class BlockBerryBush extends BlockBase implements IColoredBlock,
     }
 	
 	@Override
-	public void onEntityCollidedWithBlock(World world, BlockPos pos, IBlockState state, Entity entity) {
+	public void onEntityCollision(World world, BlockPos pos, IBlockState state, Entity entity) {
 		entity.motionX *= 0.6F;
 		entity.motionZ *= 0.6F;
 	}
@@ -198,7 +198,7 @@ public abstract class BlockBerryBush extends BlockBase implements IColoredBlock,
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public BlockRenderLayer getBlockLayer() {
+	public BlockRenderLayer getRenderLayer() {
 		return BlockRenderLayer.CUTOUT;
 	}
 

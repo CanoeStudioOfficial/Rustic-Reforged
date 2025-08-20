@@ -98,7 +98,7 @@ public class GuiCondenser extends GuiContainer {
 			lines.add(TextFormatting.GRAY + I18n.format("tooltip.rustic.empty"));
 			lines.add(TextFormatting.GRAY + "" + 0 + "/" + capacity);
 		} else {
-			lines.add(fluid.getFluid().getRarity(fluid).rarityColor + fluid.getLocalizedName());
+			lines.add(fluid.getFluid().getRarity(fluid).color + fluid.getLocalizedName());
 			lines.add(TextFormatting.GRAY + "" + fluid.amount + "/" + capacity);
 		}
 		drawHoveringText(lines, x - guiLeft, y - guiTop);

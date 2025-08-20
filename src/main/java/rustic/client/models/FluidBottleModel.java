@@ -181,8 +181,8 @@ public class FluidBottleModel implements IModel {
 
 		@Override
 		public boolean accepts(ResourceLocation modelLocation) {
-			return modelLocation.getResourceDomain().equals(Rustic.MODID)
-					&& modelLocation.getResourcePath().contains("fluid_bottle");
+			return modelLocation.getNamespace().equals(Rustic.MODID)
+					&& modelLocation.getPath().contains("fluid_bottle");
 		}
 
 		@Override

@@ -31,7 +31,7 @@ public class BlockDoubleSlabBase extends BlockSlab {
 	public BlockDoubleSlabBase(Material materialIn, String name) {
 		super(materialIn);
 		setRegistryName(name);
-		setUnlocalizedName(Rustic.MODID + "." + name);
+		setTranslationKey(Rustic.MODID + "." + name);
 		GameRegistry.findRegistry(Block.class).register(this);
 		//GameRegistry.register(new ItemBlock(this), getRegistryName());
 		this.setHardness(2.0F);
@@ -40,7 +40,7 @@ public class BlockDoubleSlabBase extends BlockSlab {
 	public BlockDoubleSlabBase(Material materialIn, String name, SoundType sound) {
 		super(materialIn);
 		setRegistryName(name);
-		setUnlocalizedName(Rustic.MODID + "." + name);
+		setTranslationKey(Rustic.MODID + "." + name);
 		GameRegistry.findRegistry(Block.class).register(this);
 		//GameRegistry.register(new ItemBlock(this), getRegistryName());
 		this.setHardness(2.0F);
@@ -65,7 +65,7 @@ public class BlockDoubleSlabBase extends BlockSlab {
 	}
 
 	@Override
-	public String getUnlocalizedName(int meta) {
+	public String getTranslationKey(int meta) {
 		return null;
 	}
 

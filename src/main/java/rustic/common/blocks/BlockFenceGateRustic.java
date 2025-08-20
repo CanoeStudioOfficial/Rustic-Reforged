@@ -21,7 +21,7 @@ public class BlockFenceGateRustic extends BlockFenceGate {
 	public BlockFenceGateRustic(IBlockState state, String name) {
 		super(BlockPlanks.EnumType.OAK);
 		setRegistryName(name);
-		setUnlocalizedName(Rustic.MODID + "." + name);
+		setTranslationKey(Rustic.MODID + "." + name);
 		GameRegistry.findRegistry(Block.class).register(this);
 		GameRegistry.findRegistry(Item.class).register(new ItemBlock(this).setRegistryName(getRegistryName()));
 		setHardness(2F);

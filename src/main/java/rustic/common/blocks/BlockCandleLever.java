@@ -162,15 +162,15 @@ public class BlockCandleLever extends BlockCandle {
 		if (enumfacing.getAxis().isHorizontal()) {
 			EnumFacing enumfacing1 = enumfacing.getOpposite();
 			worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL,
-				x + 0.27D * (double) enumfacing1.getFrontOffsetX() * (pulled ? 0.0 : 1.0),
+				x + 0.27D * (double) enumfacing1.getXOffset() * (pulled ? 0.0 : 1.0),
 				y + 0.25D + (pulled ? -0.125 : 0.0),
-				z + 0.27D * (double) enumfacing1.getFrontOffsetZ() * (pulled ? 0.0 : 1.0),
+				z + 0.27D * (double) enumfacing1.getZOffset() * (pulled ? 0.0 : 1.0),
 				0.0D, 0.0D, 0.0D, new int[0]
 			);
 			worldIn.spawnParticle(EnumParticleTypes.FLAME,
-				x + 0.27D * (double) enumfacing1.getFrontOffsetX() * (pulled ? 0.0 : 1.0),
+				x + 0.27D * (double) enumfacing1.getXOffset() * (pulled ? 0.0 : 1.0),
 				y + 0.25D + (pulled ? -0.125 : 0.0),
-				z + 0.27D * (double) enumfacing1.getFrontOffsetZ() * (pulled ? 0.0 : 1.0),
+				z + 0.27D * (double) enumfacing1.getZOffset() * (pulled ? 0.0 : 1.0),
 				0.0D, 0.0D, 0.0D, new int[0]
 			);
 		} else {
