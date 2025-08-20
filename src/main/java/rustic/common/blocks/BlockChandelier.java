@@ -55,13 +55,22 @@ public class BlockChandelier extends BlockFallingBase {
 	public boolean isOpaqueCube(IBlockState blockState) {
 		return false;
 	}
-	
-	@Override
-	protected void onStartFalling(EntityFallingBlock fallingEntity) {
-		fallingEntity.setHurtEntities(true);
-		fallingEntity.fallHurtMax = 400;
-		fallingEntity.fallHurtAmount = 6.0F;
-	}
+
+    @Override
+    protected void onStartFalling(EntityFallingBlock fallingEntity) {
+        fallingEntity.setHurtEntities(true);
+        try {
+            Field fallHurtMaxField = EntityFallingBlock.class.getDeclaredField("fallHurtMax");
+            fallHurtMaxField.setAccessible(true);
+            fallHurtMaxField.setInt(fallingEntity, 400);
+
+            Field fallHurtAmountField = EntityFallingBlock.class.getDeclaredField("fallHurtAmount");
+            fallHurtAmountField.setAccessible(true);
+            fallHurtAmountField.setFloat(fallingEntity, 6.0F);
+        } catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
 
 	@Override
 	public void onEndFalling(World worldIn, BlockPos pos, IBlockState p_176502_3_, IBlockState p_176502_4_) {

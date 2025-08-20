@@ -1,6 +1,7 @@
 package rustic.core;
 
 import java.io.File;
+import java.lang.reflect.Field;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.ArrayList;
@@ -75,19 +76,26 @@ public class CommonProxy {
     }
 
     public void postInit(FMLPostInitializationEvent event) {
-    	if (config.hasChanged()) {
+        if (config.hasChanged()) {
             config.save();
         }
-    	
-    	BlockDispenser.DISPENSE_BEHAVIOR_REGISTRY.putObject(Item.getItemFromBlock(ModBlocks.ROPE), DispenseRope.getInstance());
-    	
-    	Set<Item> chickenTemptItems = EntityChicken.TEMPTATION_ITEMS;
-    	chickenTemptItems.add(ModItems.CHILI_PEPPER_SEEDS);
-    	chickenTemptItems.add(ModItems.TOMATO_SEEDS);
-    	chickenTemptItems.add(Item.getItemFromBlock(ModBlocks.APPLE_SEEDS));
-    	chickenTemptItems.add(Item.getItemFromBlock(ModBlocks.GRAPE_STEM));
-    	
-    	BookManager.init();
+
+        BlockDispenser.DISPENSE_BEHAVIOR_REGISTRY.putObject(Item.getItemFromBlock(ModBlocks.ROPE), DispenseRope.getInstance());
+
+        try {
+            Field temptationItemsField = EntityChicken.class.getDeclaredField("TEMPTATION_ITEMS");
+            temptationItemsField.setAccessible(true);
+            @SuppressWarnings("unchecked")
+            Set<Item> chickenTemptItems = (Set<Item>) temptationItemsField.get(null);
+            chickenTemptItems.add(ModItems.CHILI_PEPPER_SEEDS);
+            chickenTemptItems.add(ModItems.TOMATO_SEEDS);
+            chickenTemptItems.add(Item.getItemFromBlock(ModBlocks.APPLE_SEEDS));
+            chickenTemptItems.add(Item.getItemFromBlock(ModBlocks.GRAPE_STEM));
+        } catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
+        BookManager.init();
     }
     
     private void initFluidBottle() {

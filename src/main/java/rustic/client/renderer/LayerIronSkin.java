@@ -312,139 +312,194 @@ public class LayerIronSkin<T extends ModelBase> implements LayerRenderer<EntityL
 			mainModel.render(entityLivingBaseIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
 		}
 	}
-	
-	
-	public static class ModelRendererOverrider {
-		
-		private ModelRenderer modelRendererRef;
-		private boolean overridden = false;
-		
-		private boolean origCompiled;
-		private int origDisplayList;
-		private List<ModelBox> origCubeList;
 
-		private boolean altCompiled;
-		private int altDisplayList;
-		private List<ModelBox> altCubeList;
-	    
-	    ModelRendererOverrider(ModelRenderer modelRenderer) {
-	    	modelRendererRef = modelRenderer;
-	    	
-	    	origCompiled = modelRenderer.compiled;
-	    	origDisplayList = modelRenderer.displayList;
-	    	origCubeList = modelRenderer.cubeList;
-	    	
-	    	generateCubeList();
-	    }
-	    
-	    public boolean isOverridden() {
-	    	return overridden;
-	    }
-	    
-	    public void setActive(boolean active) {
-	    	if (active == overridden) return;
-	    	
-	    	if (active) {
-	    		origCompiled = modelRendererRef.compiled;
-	    		origDisplayList = modelRendererRef.displayList;
-	    		
-	    		modelRendererRef.compiled = altCompiled;
-	    		modelRendererRef.displayList = altDisplayList;
-	    		modelRendererRef.cubeList = altCubeList;
-	    	} else {
-	    		altCompiled = modelRendererRef.compiled;
-	    		altDisplayList = modelRendererRef.displayList;
-	    		
-	    		modelRendererRef.compiled = origCompiled;
-	    		modelRendererRef.displayList = origDisplayList;
-	    		modelRendererRef.cubeList = origCubeList;
-	    	}
-	    	overridden = active;
-	    }
-	    
-	    public void enableOverride() {
-	    	setActive(true);
-	    }
-	    
-	    public void disableOverride() {
-	    	setActive(false);
-	    }
-		
-	    private void generateCubeList() {
-	    	this.altCubeList = new ArrayList<>();
-	    	for (ModelBox origBox : origCubeList) {
-	    		this.altCubeList.add(new ModelBoxOverride(modelRendererRef, origBox));
-	    	}
-	    }
-		
-	}
-	
-	public static class ModelBoxOverride extends ModelBox {
-		
-		public ModelBoxOverride(ModelRenderer renderer, ModelBox orig) {
-			// garbage in for tex coords and scale because it's annoying to calculate and will be overridden anyway
-			super(renderer, 0, 0, orig.posX1, orig.posY1, orig.posZ1, (int) (orig.posX2 - orig.posX1), (int) (orig.posY2 - orig.posY1), (int) (orig.posZ2 - orig.posZ1), 0);
-			this.posX1 = orig.posX1;
-			this.posY1 = orig.posY1;
-			this.posZ1 = orig.posZ1;
-			this.posX2 = orig.posX2;
-			this.posY2 = orig.posY2;
-			this.posZ2 = orig.posZ2;
-			this.boxName = orig.boxName;
-			this.vertexPositions[0] = orig.vertexPositions[0];
-			this.vertexPositions[1] = orig.vertexPositions[1];
-			this.vertexPositions[2] = orig.vertexPositions[2];
-			this.vertexPositions[3] = orig.vertexPositions[3];
-			this.vertexPositions[4] = orig.vertexPositions[4];
-			this.vertexPositions[5] = orig.vertexPositions[5];
-			this.vertexPositions[6] = orig.vertexPositions[6];
-			this.vertexPositions[7] = orig.vertexPositions[7];
-			this.quadList[0] = new MultiTexturedQuad(orig.quadList[0]);
-			this.quadList[1] = new MultiTexturedQuad(orig.quadList[1]);
-			this.quadList[2] = new MultiTexturedQuad(orig.quadList[2]);
-			this.quadList[3] = new MultiTexturedQuad(orig.quadList[3]);
-			this.quadList[4] = new MultiTexturedQuad(orig.quadList[4]);
-			this.quadList[5] = new MultiTexturedQuad(orig.quadList[5]);
-		}
-		
-	}
-	
-	public static class MultiTexturedQuad extends TexturedQuad {
-		
-		public MultiTexturedQuad(TexturedQuad orig) {
-			super(orig.vertexPositions);
-			this.invertNormal = orig.invertNormal;
-		}
-		
-		/**
-	     * Draw this primitve. This is typically called only once as the generated drawing instructions are saved by the
-	     * renderer and reused later.
-	     */
-	    @SideOnly(Side.CLIENT)
-	    public void draw(BufferBuilder renderer, float scale) {
-	        Vec3d vec3d = this.vertexPositions[1].vector3D.subtractReverse(this.vertexPositions[0].vector3D);
-	        Vec3d vec3d1 = this.vertexPositions[1].vector3D.subtractReverse(this.vertexPositions[2].vector3D);
-	        Vec3d vec3d2 = vec3d1.crossProduct(vec3d).normalize();
-	        float f = (float)vec3d2.x;
-	        float f1 = (float)vec3d2.y;
-	        float f2 = (float)vec3d2.z;
 
-	        if (this.invertNormal) {
-	            f = -f;
-	            f1 = -f1;
-	            f2 = -f2;
-	        }
+    public static class ModelRendererOverrider {
 
-	        renderer.begin(7, VertexFormatMultiTex.OLDMODEL_POSITION_MULTITEX_NORMAL);
+        private ModelRenderer modelRendererRef;
+        private boolean overridden = false;
 
-	        for (int i = 0; i < 4; ++i) {
-	            PositionTextureVertex positiontexturevertex = this.vertexPositions[i];
-	            renderer.pos(positiontexturevertex.vector3D.x * (double)scale, positiontexturevertex.vector3D.y * (double)scale, positiontexturevertex.vector3D.z * (double)scale).tex((double)positiontexturevertex.texturePositionX, (double)positiontexturevertex.texturePositionY).normal(f, f1, f2).endVertex();
-	        }
+        private boolean origCompiled;
+        private int origDisplayList;
+        private List<ModelBox> origCubeList;
 
-	        Tessellator.getInstance().draw();
-	    }
-		
-	}
+        private boolean altCompiled;
+        private int altDisplayList;
+        private List<ModelBox> altCubeList;
+
+        ModelRendererOverrider(ModelRenderer modelRenderer) {
+            modelRendererRef = modelRenderer;
+
+            try {
+                origCompiled = ReflectionHelper.getPrivateValue(ModelRenderer.class, modelRenderer, "compiled", "field_78801_a");
+                origDisplayList = ReflectionHelper.getPrivateValue(ModelRenderer.class, modelRenderer, "displayList", "field_78799_b");
+            } catch (Exception e) {
+                origCompiled = false;
+                origDisplayList = 0;
+            }
+            origCubeList = modelRenderer.cubeList;
+
+            generateCubeList();
+        }
+
+        public boolean isOverridden() {
+            return overridden;
+        }
+
+        public void setActive(boolean active) {
+            if (active == overridden) return;
+
+            try {
+                if (active) {
+                    origCompiled = ReflectionHelper.getPrivateValue(ModelRenderer.class, modelRendererRef, "compiled", "field_78801_a");
+                    origDisplayList = ReflectionHelper.getPrivateValue(ModelRenderer.class, modelRendererRef, "displayList", "field_78799_b");
+
+                    ReflectionHelper.setPrivateValue(ModelRenderer.class, modelRendererRef, altCompiled, "compiled", "field_78801_a");
+                    ReflectionHelper.setPrivateValue(ModelRenderer.class, modelRendererRef, altDisplayList, "displayList", "field_78799_b");
+                    modelRendererRef.cubeList = altCubeList;
+                } else {
+                    altCompiled = ReflectionHelper.getPrivateValue(ModelRenderer.class, modelRendererRef, "compiled", "field_78801_a");
+                    altDisplayList = ReflectionHelper.getPrivateValue(ModelRenderer.class, modelRendererRef, "displayList", "field_78799_b");
+
+                    ReflectionHelper.setPrivateValue(ModelRenderer.class, modelRendererRef, origCompiled, "compiled", "field_78801_a");
+                    ReflectionHelper.setPrivateValue(ModelRenderer.class, modelRendererRef, origDisplayList, "displayList", "field_78799_b");
+                    modelRendererRef.cubeList = origCubeList;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            overridden = active;
+        }
+
+        public void enableOverride() {
+            setActive(true);
+        }
+
+        public void disableOverride() {
+            setActive(false);
+        }
+
+        private void generateCubeList() {
+            this.altCubeList = new ArrayList<>();
+            for (ModelBox origBox : origCubeList) {
+                this.altCubeList.add(new ModelBoxOverride(modelRendererRef, origBox));
+            }
+        }
+
+    }
+
+    public static class ModelBoxOverride extends ModelBox {
+
+        public ModelBoxOverride(ModelRenderer renderer, ModelBox orig) {
+            super(renderer,
+                    getPrivateInt(orig, "textureU"),
+                    getPrivateInt(orig, "textureV"),
+                    getPrivateFloat(orig, "posX1"),
+                    getPrivateFloat(orig, "posY1"),
+                    getPrivateFloat(orig, "posZ1"),
+                    (int)(getPrivateFloat(orig, "posX2") - getPrivateFloat(orig, "posX1")),
+                    (int)(getPrivateFloat(orig, "posY2") - getPrivateFloat(orig, "posY1")),
+                    (int)(getPrivateFloat(orig, "posZ2") - getPrivateFloat(orig, "posZ1")),
+                    getPrivateFloat(orig, "delta"));
+
+            this.boxName = orig.boxName;
+
+            try {
+                PositionTextureVertex[] origVertexPositions = ReflectionHelper.getPrivateValue(ModelBox.class, orig, "vertexPositions");
+                ReflectionHelper.setPrivateValue(ModelBox.class, this, origVertexPositions, "vertexPositions");
+
+                TexturedQuad[] origQuadList = ReflectionHelper.getPrivateValue(ModelBox.class, orig, "quadList");
+                TexturedQuad[] newQuadList = new TexturedQuad[origQuadList.length];
+                for (int i = 0; i < origQuadList.length; i++) {
+                    if (origQuadList[i] != null) {
+                        newQuadList[i] = new MultiTexturedQuad(origQuadList[i]);
+                    }
+                }
+                ReflectionHelper.setPrivateValue(ModelBox.class, this, newQuadList, "quadList");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        private static float getPrivateFloat(ModelBox box, String... names) {
+            try {
+                return ReflectionHelper.getPrivateValue(ModelBox.class, box, names);
+            } catch (Exception e) {
+                return 0f;
+            }
+        }
+
+        private static int getPrivateInt(ModelBox box, String... names) {
+            try {
+                return ReflectionHelper.getPrivateValue(ModelBox.class, box, names);
+            } catch (Exception e) {
+                return 0;
+            }
+        }
+
+    }
+
+    public static class MultiTexturedQuad extends TexturedQuad {
+
+        public MultiTexturedQuad(TexturedQuad orig) {
+            super(getOrigVertexPositions(orig));
+            try {
+                boolean origInvertNormal = ReflectionHelper.getPrivateValue(TexturedQuad.class, orig, "invertNormal");
+                ReflectionHelper.setPrivateValue(TexturedQuad.class, this, origInvertNormal, "invertNormal");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        private static PositionTextureVertex[] getOrigVertexPositions(TexturedQuad quad) {
+            try {
+                return ReflectionHelper.getPrivateValue(TexturedQuad.class, quad, "vertexPositions");
+            } catch (Exception e) {
+                e.printStackTrace();
+                return new PositionTextureVertex[0];
+            }
+        }
+
+        /**
+         * Draw this primitve. This is typically called only once as the generated drawing instructions are saved by the
+         * renderer and reused later.
+         */
+        @SideOnly(Side.CLIENT)
+        public void draw(BufferBuilder renderer, float scale) {
+            PositionTextureVertex[] vertexPositions = getOrigVertexPositions(this);
+            if (vertexPositions == null || vertexPositions.length < 4) {
+                return;
+            }
+            Vec3d vec3d = vertexPositions[1].vector3D.subtractReverse(vertexPositions[0].vector3D);
+            Vec3d vec3d1 = vertexPositions[1].vector3D.subtractReverse(vertexPositions[2].vector3D);
+            Vec3d vec3d2 = vec3d1.crossProduct(vec3d).normalize();
+            float f = (float)vec3d2.x;
+            float f1 = (float)vec3d2.y;
+            float f2 = (float)vec3d2.z;
+
+            boolean invertNormal = false;
+            try {
+                invertNormal = ReflectionHelper.getPrivateValue(TexturedQuad.class, this, "invertNormal");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            if (invertNormal) {
+                f = -f;
+                f1 = -f1;
+                f2 = -f2;
+            }
+
+            renderer.begin(7, VertexFormatMultiTex.OLDMODEL_POSITION_MULTITEX_NORMAL);
+
+            for (int i = 0; i < 4; ++i) {
+                PositionTextureVertex positiontexturevertex = vertexPositions[i];
+                renderer.pos(positiontexturevertex.vector3D.x * (double)scale, positiontexturevertex.vector3D.y * (double)scale, positiontexturevertex.vector3D.z * (double)scale).tex((double)positiontexturevertex.texturePositionX, (double)positiontexturevertex.texturePositionY).normal(f, f1, f2).endVertex();
+            }
+
+            Tessellator.getInstance().draw();
+        }
+
+    }
 
 }
