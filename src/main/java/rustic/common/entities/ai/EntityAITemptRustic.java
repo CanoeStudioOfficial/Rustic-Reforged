@@ -1,10 +1,10 @@
 package rustic.common.entities.ai;
 
-import java.util.Set;
-
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.ai.EntityAITempt;
 import net.minecraft.item.Item;
+
+import java.util.Set;
 
 // Using a custom class allows us to more easily check if an entity has this task already
 public class EntityAITemptRustic extends EntityAITempt {

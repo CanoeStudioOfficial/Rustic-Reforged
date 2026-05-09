@@ -1,11 +1,11 @@
 package rustic.common.crafting;
 
-import java.util.Random;
-
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fluids.FluidStack;
 import rustic.common.Config;
 import rustic.common.blocks.fluids.FluidBooze;
+
+import java.util.Random;
 
 public class BrewingBarrelRecipe implements IBrewingBarrelRecipe {
 	

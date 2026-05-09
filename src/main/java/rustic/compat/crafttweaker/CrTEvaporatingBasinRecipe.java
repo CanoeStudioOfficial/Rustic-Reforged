@@ -1,11 +1,8 @@
 package rustic.compat.crafttweaker;
 
-import java.util.List;
-
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
-import rustic.common.crafting.ICondenserRecipe;
 import rustic.common.crafting.IEvaporatingBasinRecipe;
 
 public class CrTEvaporatingBasinRecipe implements IEvaporatingBasinRecipe {

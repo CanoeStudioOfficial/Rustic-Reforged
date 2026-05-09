@@ -1,7 +1,5 @@
 package rustic.common.tileentity;
 
-import javax.annotation.Nullable;
-
 import invtweaks.api.container.ChestContainer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
@@ -11,6 +9,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
+
+import javax.annotation.Nullable;
 
 @ChestContainer
 public class ContainerCabinet extends Container {

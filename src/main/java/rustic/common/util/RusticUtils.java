@@ -1,9 +1,5 @@
 package rustic.common.util;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -32,6 +28,10 @@ import rustic.common.blocks.fluids.ModFluids;
 import rustic.common.items.ItemFluidBottle;
 import rustic.common.items.ModItems;
 import rustic.core.Rustic;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 public class RusticUtils {
 	

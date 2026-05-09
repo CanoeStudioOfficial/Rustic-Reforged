@@ -1,7 +1,5 @@
 package rustic.common.blocks;
 
-import java.util.Random;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.IGrowable;
@@ -35,6 +33,8 @@ import rustic.common.blocks.BlockPlanksRustic.EnumType;
 import rustic.common.world.WorldGenIronwoodTree;
 import rustic.common.world.WorldGenOliveTree;
 import rustic.core.Rustic;
+
+import java.util.Random;
 
 public class BlockSaplingRustic extends BlockBush implements IGrowable {
 

@@ -1,9 +1,5 @@
 package rustic.common.blocks;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.SoundType;
@@ -29,6 +25,10 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import rustic.common.items.ModItems;
 import rustic.core.Rustic;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class BlockBeehive extends BlockBase {
 

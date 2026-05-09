@@ -1,7 +1,5 @@
 package rustic.common.tileentity;
 
-import javax.annotation.Nullable;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -23,6 +21,8 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import rustic.common.util.ItemStackHandlerRustic;
 import rustic.compat.Compat;
 import vazkii.quark.api.IDropoffManager;
+
+import javax.annotation.Nullable;
 
 @Optional.Interface(modid = Compat.QUARK, iface = "vazkii.quark.api.IDropoffManager", striprefs = true)
 public class TileEntityVase extends TileEntityLockableLoot implements IDropoffManager {

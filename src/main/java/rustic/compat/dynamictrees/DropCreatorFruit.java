@@ -1,13 +1,9 @@
 package rustic.compat.dynamictrees;
 
-import java.util.List;
-import java.util.Random;
-
 import com.ferreusveritas.dynamictrees.api.TreeHelper;
 import com.ferreusveritas.dynamictrees.blocks.BlockBranch;
 import com.ferreusveritas.dynamictrees.systems.dropcreators.DropCreator;
 import com.ferreusveritas.dynamictrees.trees.Species;
-
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -16,6 +12,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import rustic.core.Rustic;
+
+import java.util.List;
+import java.util.Random;
 
 public class DropCreatorFruit extends DropCreator {
 	

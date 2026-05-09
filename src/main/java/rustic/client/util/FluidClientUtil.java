@@ -1,9 +1,6 @@
 package rustic.client.util;
 
-import java.util.Map;
-
 import com.google.common.collect.Maps;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
@@ -12,6 +9,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
+
+import java.util.Map;
 
 public class FluidClientUtil {
 	public static Map<Fluid, TextureAtlasSprite> stillTextures = Maps.newHashMap();

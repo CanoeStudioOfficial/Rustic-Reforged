@@ -1,10 +1,5 @@
 package rustic.common.world;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
-import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -15,6 +10,10 @@ import net.minecraftforge.common.BiomeDictionary.Type;
 import rustic.common.Config;
 import rustic.common.blocks.ModBlocks;
 import rustic.common.blocks.crops.BlockBerryBush;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class WorldGenWildberries extends WorldGenerator {
 	

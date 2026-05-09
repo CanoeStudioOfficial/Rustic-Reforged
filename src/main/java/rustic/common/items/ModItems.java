@@ -1,10 +1,5 @@
 package rustic.common.items;
 
-import java.util.List;
-import java.util.Random;
-
-import javax.annotation.Nullable;
-
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
@@ -12,11 +7,7 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.stats.StatList;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.SoundCategory;
+import net.minecraft.util.*;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
@@ -28,6 +19,10 @@ import rustic.common.blocks.ModBlocks;
 import rustic.common.entities.EntityTomato;
 import rustic.common.potions.PotionsRustic;
 import rustic.core.Rustic;
+
+import javax.annotation.Nullable;
+import java.util.List;
+import java.util.Random;
 
 public class ModItems {
 	

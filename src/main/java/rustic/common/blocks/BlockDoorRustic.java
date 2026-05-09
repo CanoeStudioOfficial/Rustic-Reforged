@@ -1,7 +1,5 @@
 package rustic.common.blocks;
 
-import java.util.Random;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDoor;
 import net.minecraft.block.SoundType;
@@ -23,6 +21,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import rustic.core.Rustic;
+
+import java.util.Random;
 
 public class BlockDoorRustic extends BlockDoor {
 

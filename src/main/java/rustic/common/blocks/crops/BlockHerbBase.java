@@ -1,7 +1,5 @@
 package rustic.common.blocks.crops;
 
-import java.util.Random;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.IGrowable;
@@ -30,6 +28,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import rustic.core.Rustic;
+
+import java.util.Random;
 
 public abstract class BlockHerbBase extends BlockBush implements IGrowable, IPlantable {
 

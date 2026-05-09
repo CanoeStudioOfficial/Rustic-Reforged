@@ -1,7 +1,5 @@
 package rustic.common.world;
 
-import java.util.Random;
-
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.EnumFacing;
@@ -11,6 +9,8 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import rustic.common.Config;
 import rustic.common.blocks.BlockBeehive;
 import rustic.common.blocks.ModBlocks;
+
+import java.util.Random;
 
 public class WorldGenBeehive extends WorldGenerator {
 

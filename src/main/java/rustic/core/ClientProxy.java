@@ -1,11 +1,5 @@
 package rustic.core;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.Particle;
@@ -41,6 +35,8 @@ import rustic.common.entities.ModEntities;
 import rustic.common.items.IColoredItem;
 import rustic.common.items.ModItems;
 import rustic.compat.Compat;
+
+import java.util.*;
 
 public class ClientProxy extends CommonProxy {
 

@@ -1,7 +1,5 @@
 package rustic.common.entities;
 
-import java.util.Random;
-
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityThrowable;
@@ -17,6 +15,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import rustic.common.items.ModItems;
 import rustic.common.potions.PotionsRustic;
+
+import java.util.Random;
 
 public class EntityTomato extends EntityThrowable {
 

@@ -1,7 +1,5 @@
 package rustic.common.network;
 
-import java.util.Random;
-
 import io.netty.buffer.ByteBuf;
 import net.minecraft.client.Minecraft;
 import net.minecraft.item.Item;
@@ -13,6 +11,8 @@ import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import rustic.common.items.ModItems;
+
+import java.util.Random;
 
 public class MessageShameFX implements IMessage {
 

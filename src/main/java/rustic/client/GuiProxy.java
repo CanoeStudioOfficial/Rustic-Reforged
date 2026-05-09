@@ -5,32 +5,11 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.IGuiHandler;
-import rustic.client.gui.GuiApiary;
-import rustic.client.gui.GuiBarrel;
-import rustic.client.gui.GuiBrewingBarrel;
-import rustic.client.gui.GuiCabinet;
-import rustic.client.gui.GuiCabinetDouble;
-import rustic.client.gui.GuiCondenser;
-import rustic.client.gui.GuiCondenserAdvanced;
-import rustic.client.gui.GuiVase;
+import rustic.client.gui.*;
 import rustic.client.gui.book.GuiBook;
 import rustic.common.blocks.BlockCabinet;
 import rustic.common.items.ItemBook;
-import rustic.common.tileentity.ContainerApiary;
-import rustic.common.tileentity.ContainerBarrel;
-import rustic.common.tileentity.ContainerBrewingBarrel;
-import rustic.common.tileentity.ContainerCabinet;
-import rustic.common.tileentity.ContainerCabinetDouble;
-import rustic.common.tileentity.ContainerCondenser;
-import rustic.common.tileentity.ContainerCondenserAdvanced;
-import rustic.common.tileentity.ContainerVase;
-import rustic.common.tileentity.TileEntityApiary;
-import rustic.common.tileentity.TileEntityBarrel;
-import rustic.common.tileentity.TileEntityBrewingBarrel;
-import rustic.common.tileentity.TileEntityCabinet;
-import rustic.common.tileentity.TileEntityCondenser;
-import rustic.common.tileentity.TileEntityCondenserAdvancedBottom;
-import rustic.common.tileentity.TileEntityVase;
+import rustic.common.tileentity.*;
 
 public class GuiProxy implements IGuiHandler {
 

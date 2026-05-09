@@ -1,7 +1,5 @@
 package rustic.compat.jei;
 
-import java.util.List;
-
 import mezz.jei.api.IGuiHelper;
 import mezz.jei.api.gui.IDrawable;
 import mezz.jei.api.gui.IGuiFluidStackGroup;
@@ -14,6 +12,8 @@ import net.minecraft.client.resources.I18n;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.FluidStack;
+
+import java.util.List;
 
 public class EvaporatingRecipeCategory extends BlankRecipeCategory {
 

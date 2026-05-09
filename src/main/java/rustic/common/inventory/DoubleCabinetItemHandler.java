@@ -1,12 +1,6 @@
 package rustic.common.inventory;
 
-import java.lang.ref.WeakReference;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
 import com.google.common.base.Objects;
-
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
@@ -15,6 +9,10 @@ import net.minecraft.world.World;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import rustic.common.blocks.BlockCabinet;
 import rustic.common.tileentity.TileEntityCabinet;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import java.lang.ref.WeakReference;
 
 public class DoubleCabinetItemHandler extends WeakReference<TileEntityCabinet> implements IItemHandlerModifiable {
 

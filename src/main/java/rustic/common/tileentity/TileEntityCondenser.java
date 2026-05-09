@@ -1,8 +1,5 @@
 package rustic.common.tileentity;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
@@ -18,6 +15,9 @@ import rustic.common.blocks.ModBlocks;
 import rustic.common.crafting.ICondenserRecipe;
 import rustic.common.crafting.Recipes;
 import rustic.core.Rustic;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public class TileEntityCondenser extends TileEntityCondenserBase {
 	public static int SLOT_NUM = 5;

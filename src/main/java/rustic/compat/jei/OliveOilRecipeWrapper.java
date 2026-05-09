@@ -1,8 +1,5 @@
 package rustic.compat.jei;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.BlankRecipeWrapper;
 import mezz.jei.api.recipe.wrapper.ICraftingRecipeWrapper;
@@ -16,6 +13,9 @@ import net.minecraftforge.fluids.capability.templates.FluidHandlerItemStack;
 import rustic.common.blocks.fluids.ModFluids;
 import rustic.common.items.ModItems;
 import rustic.core.Rustic;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class OliveOilRecipeWrapper extends BlankRecipeWrapper implements ICraftingRecipeWrapper {
 	

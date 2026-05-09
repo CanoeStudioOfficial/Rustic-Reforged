@@ -1,9 +1,5 @@
 package rustic.common.blocks;
 
-import java.util.List;
-
-import javax.annotation.Nullable;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.SoundType;
@@ -39,6 +35,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import rustic.common.blocks.crops.BlockGrapeLeaves;
 import rustic.common.blocks.properties.UnlistedPropertyBool;
 import rustic.core.ClientProxy;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class BlockLattice extends BlockBase implements IColoredBlock {
 

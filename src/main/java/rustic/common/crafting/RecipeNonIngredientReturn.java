@@ -1,7 +1,5 @@
 package rustic.common.crafting;
 
-import javax.annotation.Nonnull;
-
 import net.minecraft.init.Items;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.Item;
@@ -10,6 +8,8 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 import rustic.common.blocks.ModBlocks;
+
+import javax.annotation.Nonnull;
 
 public class RecipeNonIngredientReturn extends ShapelessOreRecipe {
 

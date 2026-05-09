@@ -1,7 +1,5 @@
 package rustic.client.models;
 
-import java.util.List;
-
 import net.minecraft.client.renderer.block.model.IBakedModel;
 import net.minecraft.client.renderer.block.model.ItemOverride;
 import net.minecraft.client.renderer.block.model.ItemOverrideList;
@@ -12,6 +10,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.fluids.Fluid;
 import rustic.common.blocks.ModBlocks;
 import rustic.common.tileentity.TileEntityLiquidBarrel;
+
+import java.util.List;
 
 public class LiquidBarrelItemOverrideList extends ItemOverrideList {
 

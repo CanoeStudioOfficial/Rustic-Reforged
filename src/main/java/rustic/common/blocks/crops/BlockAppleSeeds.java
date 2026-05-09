@@ -1,7 +1,5 @@
 package rustic.common.blocks.crops;
 
-import java.util.Random;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.SoundType;
@@ -25,6 +23,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import rustic.common.blocks.BlockBase;
 import rustic.common.blocks.ModBlocks;
 import rustic.core.Rustic;
+
+import java.util.Random;
 
 public class BlockAppleSeeds extends BlockBase implements IGrowable, IPlantable {
 

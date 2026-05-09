@@ -1,10 +1,5 @@
 package rustic.core;
 
-import java.util.UUID;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -29,6 +24,8 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import rustic.client.EventHandlerClient;
 import rustic.common.Config;
 import rustic.common.EventHandlerCommon;
@@ -41,6 +38,8 @@ import rustic.common.potions.EventHandlerPotions;
 import rustic.compat.Compat;
 import rustic.compat.crafttweaker.CraftTweakerHelper;
 import rustic.compat.dynamictrees.DynamicTreesCompat;
+
+import java.util.UUID;
 
 @Mod(modid = Rustic.MODID, name = Rustic.NAME, version = Rustic.VERSION, dependencies = Rustic.DEPENDENCIES)
 public class Rustic {

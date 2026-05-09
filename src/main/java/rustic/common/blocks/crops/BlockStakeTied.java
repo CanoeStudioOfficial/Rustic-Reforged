@@ -1,8 +1,5 @@
 package rustic.common.blocks.crops;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -24,6 +21,9 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import rustic.common.blocks.BlockBase;
 import rustic.common.blocks.BlockRope;
 import rustic.common.blocks.ModBlocks;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BlockStakeTied extends BlockBase {
 	

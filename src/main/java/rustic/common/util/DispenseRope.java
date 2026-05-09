@@ -1,7 +1,5 @@
 package rustic.common.util;
 
-import javax.annotation.Nonnull;
-
 import net.minecraft.block.BlockDispenser;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
@@ -14,6 +12,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import rustic.common.blocks.BlockRopeBase;
 import rustic.common.blocks.ModBlocks;
+
+import javax.annotation.Nonnull;
 
 public class DispenseRope extends BehaviorDefaultDispenseItem {
 

@@ -1,10 +1,10 @@
 package rustic.common.book;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.minecraft.util.ResourceLocation;
 import rustic.core.Rustic;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BookCategory {
 	

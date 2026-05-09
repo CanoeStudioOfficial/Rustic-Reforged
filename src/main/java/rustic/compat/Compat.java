@@ -1,8 +1,5 @@
 package rustic.compat;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.Fluid;
@@ -15,6 +12,9 @@ import rustic.common.blocks.ModBlocks;
 import rustic.common.items.ModItems;
 import rustic.compat.dynamictrees.DynamicTreesCompat;
 import rustic.core.Rustic;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Compat {
 	public static final String QUARK = "quark";

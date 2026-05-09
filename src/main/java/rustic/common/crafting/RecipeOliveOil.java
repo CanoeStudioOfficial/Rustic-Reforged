@@ -1,9 +1,5 @@
 package rustic.common.crafting;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
@@ -17,6 +13,10 @@ import net.minecraftforge.fluids.FluidUtil;
 import rustic.common.Config;
 import rustic.common.blocks.fluids.ModFluids;
 import rustic.common.items.ModItems;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 public class RecipeOliveOil extends net.minecraftforge.registries.IForgeRegistryEntry.Impl<IRecipe> implements IRecipe {
 	

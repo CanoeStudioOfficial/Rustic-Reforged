@@ -1,10 +1,5 @@
 package rustic.common.blocks;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.annotation.Nullable;
-
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -34,6 +29,10 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import rustic.client.renderer.LiquidBarrelRenderer;
 import rustic.common.tileentity.TileEntityLiquidBarrel;
+
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BlockLiquidBarrel extends BlockBase implements ITileEntityProvider {
 	

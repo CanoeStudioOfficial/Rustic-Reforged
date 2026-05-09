@@ -1,9 +1,5 @@
 package rustic.common.items;
 
-import java.util.List;
-
-import javax.annotation.Nullable;
-
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.client.util.ITooltipFlag;
@@ -31,6 +27,9 @@ import rustic.common.util.ElixirUtils;
 import rustic.common.util.RusticUtils;
 import rustic.core.ClientProxy;
 import rustic.core.Rustic;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class ItemElixir extends ItemBase implements IColoredItem {
 

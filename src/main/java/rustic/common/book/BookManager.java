@@ -1,8 +1,5 @@
 package rustic.common.book;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -14,6 +11,9 @@ import rustic.common.book.pages.BookPageCategories;
 import rustic.common.book.pages.BookPageText;
 import rustic.common.items.ModItems;
 import rustic.core.Rustic;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BookManager {
 	

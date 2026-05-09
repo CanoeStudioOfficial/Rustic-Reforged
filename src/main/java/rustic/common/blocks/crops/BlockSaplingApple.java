@@ -1,7 +1,5 @@
 package rustic.common.blocks.crops;
 
-import java.util.Random;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.IGrowable;
@@ -29,6 +27,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import rustic.common.world.WorldGenAppleTree;
 import rustic.core.Rustic;
+
+import java.util.Random;
 
 public class BlockSaplingApple extends BlockBush implements IGrowable {
 

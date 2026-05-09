@@ -1,10 +1,5 @@
 package rustic.common.blocks;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.annotation.Nullable;
-
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -35,6 +30,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import rustic.client.renderer.CabinetRenderer;
 import rustic.common.tileentity.TileEntityCabinet;
 import rustic.core.Rustic;
+
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BlockCabinet extends BlockRotatable implements ITileEntityProvider {
 

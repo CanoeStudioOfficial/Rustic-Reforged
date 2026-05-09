@@ -1,10 +1,6 @@
 package rustic.compat.jei;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.google.common.collect.Lists;
-
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.wrapper.IShapedCraftingRecipeWrapper;
 import net.minecraft.init.Blocks;
@@ -13,6 +9,9 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.oredict.OreDictionary;
 import rustic.common.blocks.ModBlocks;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CabinetRecipeWrapper implements IShapedCraftingRecipeWrapper {
 	

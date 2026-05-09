@@ -1,13 +1,5 @@
 package rustic.common.crafting;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -41,6 +33,8 @@ import rustic.common.items.ModItems;
 import rustic.common.potions.PotionsRustic;
 import rustic.compat.dynamictrees.DynamicTreesCompat;
 import rustic.core.Rustic;
+
+import java.util.*;
 
 public class Recipes {
 	

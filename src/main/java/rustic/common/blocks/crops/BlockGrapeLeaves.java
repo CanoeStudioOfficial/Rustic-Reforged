@@ -1,13 +1,6 @@
 package rustic.common.blocks.crops;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
-import javax.annotation.Nullable;
-
 import com.google.common.base.Predicate;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.SoundType;
@@ -39,14 +32,15 @@ import net.minecraft.world.biome.BiomeColorHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import rustic.common.blocks.BlockLattice;
-import rustic.common.blocks.BlockRope;
-import rustic.common.blocks.BlockRopeBase;
-import rustic.common.blocks.IColoredBlock;
-import rustic.common.blocks.ModBlocks;
+import rustic.common.blocks.*;
 import rustic.common.items.ModItems;
 import rustic.core.ClientProxy;
 import rustic.core.Rustic;
+
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class BlockGrapeLeaves extends BlockRopeBase implements IGrowable, IColoredBlock {
 

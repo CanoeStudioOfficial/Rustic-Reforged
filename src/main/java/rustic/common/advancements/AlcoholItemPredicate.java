@@ -1,13 +1,9 @@
 package rustic.common.advancements;
 
-import javax.annotation.Nullable;
-
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSyntaxException;
-
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.advancements.critereon.MinMaxBounds;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.JsonUtils;
 import net.minecraftforge.fluids.Fluid;
@@ -15,9 +11,9 @@ import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidUtil;
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
-import net.minecraftforge.fluids.capability.IFluidHandlerItem;
-import net.minecraftforge.oredict.OreDictionary;
 import rustic.common.blocks.fluids.FluidBooze;
+
+import javax.annotation.Nullable;
 
 public class AlcoholItemPredicate extends ItemPredicate {
 	

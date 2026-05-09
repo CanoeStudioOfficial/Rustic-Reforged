@@ -1,7 +1,5 @@
 package rustic.common.potions;
 
-import java.util.Collection;
-
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AbstractAttributeMap;
@@ -10,6 +8,8 @@ import net.minecraft.network.play.server.SPacketEntityEffect;
 import net.minecraft.network.play.server.SPacketEntityProperties;
 import net.minecraft.network.play.server.SPacketRemoveEntityEffect;
 import net.minecraft.world.WorldServer;
+
+import java.util.Collection;
 
 public class PotionIronSkin extends PotionBase {
 	

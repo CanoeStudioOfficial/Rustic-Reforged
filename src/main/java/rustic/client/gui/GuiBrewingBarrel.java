@@ -1,22 +1,21 @@
 package rustic.client.gui;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.lwjgl.opengl.GL11;
-
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.fluids.FluidStack;
+import org.lwjgl.opengl.GL11;
 import rustic.client.util.ClientUtils;
 import rustic.client.util.FluidClientUtil;
 import rustic.common.blocks.fluids.FluidBooze;
 import rustic.common.tileentity.ContainerBrewingBarrel;
 import rustic.common.tileentity.TileEntityBrewingBarrel;
 import rustic.core.Rustic;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GuiBrewingBarrel extends GuiContainer {
 	

@@ -1,8 +1,5 @@
 package rustic.common.blocks;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.EnumPushReaction;
@@ -26,6 +23,9 @@ import net.minecraft.world.World;
 import rustic.common.tileentity.TileEntityCondenserAdvancedBottom;
 import rustic.common.tileentity.TileEntityCondenserAdvancedTop;
 import rustic.core.Rustic;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BlockCondenserAdvanced extends BlockBase implements ITileEntityProvider {
 

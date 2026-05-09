@@ -1,6 +1,5 @@
 package rustic.compat.crafttweaker;
 
-import java.util.Iterator;
 import crafttweaker.CraftTweakerAPI;
 import crafttweaker.IAction;
 import crafttweaker.api.item.IIngredient;

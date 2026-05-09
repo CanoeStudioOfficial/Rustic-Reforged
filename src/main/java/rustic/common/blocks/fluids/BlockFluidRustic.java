@@ -1,7 +1,5 @@
 package rustic.common.blocks.fluids;
 
-import javax.annotation.Nonnull;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockFaceShape;
@@ -22,6 +20,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import rustic.core.Rustic;
+
+import javax.annotation.Nonnull;
 
 public class BlockFluidRustic extends BlockFluidClassic {
 

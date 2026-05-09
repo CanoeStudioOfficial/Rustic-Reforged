@@ -1,9 +1,9 @@
 package rustic.common.book;
 
+import rustic.common.book.pages.BookPageCategory;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import rustic.common.book.pages.BookPageCategory;
 
 public class BookEntryCategory extends BookEntry {
 

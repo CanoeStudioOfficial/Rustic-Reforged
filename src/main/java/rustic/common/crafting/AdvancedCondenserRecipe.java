@@ -1,13 +1,13 @@
 package rustic.common.crafting;
 
-import java.util.Arrays;
-import java.util.List;
-
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.fluids.Fluid;
 import rustic.common.items.ModItems;
 import rustic.common.util.ElixirUtils;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class AdvancedCondenserRecipe extends CondenserRecipe {
 	

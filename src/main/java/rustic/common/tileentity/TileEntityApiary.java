@@ -1,10 +1,5 @@
 package rustic.common.tileentity;
 
-import java.util.Random;
-import java.lang.Math;
-
-import javax.annotation.Nonnull;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.state.IBlockState;
@@ -24,6 +19,9 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import rustic.common.Config;
 import rustic.common.items.ModItems;
+
+import javax.annotation.Nonnull;
+import java.util.Random;
 
 public class TileEntityApiary extends TileEntity implements ITickable {
 

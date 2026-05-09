@@ -1,8 +1,5 @@
 package rustic.compat.dynamictrees.trees;
 
-import java.util.List;
-import java.util.function.BiFunction;
-
 import com.ferreusveritas.dynamictrees.blocks.BlockSurfaceRoot;
 import com.ferreusveritas.dynamictrees.systems.featuregen.FeatureGenClearVolume;
 import com.ferreusveritas.dynamictrees.systems.featuregen.FeatureGenFlareBottom;
@@ -10,7 +7,6 @@ import com.ferreusveritas.dynamictrees.systems.featuregen.FeatureGenMound;
 import com.ferreusveritas.dynamictrees.systems.featuregen.FeatureGenRoots;
 import com.ferreusveritas.dynamictrees.trees.Species;
 import com.ferreusveritas.dynamictrees.trees.TreeFamily;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -28,6 +24,9 @@ import rustic.common.items.ModItems;
 import rustic.compat.dynamictrees.DropCreatorFruit;
 import rustic.compat.dynamictrees.DynamicTreesCompat;
 import rustic.core.Rustic;
+
+import java.util.List;
+import java.util.function.BiFunction;
 
 public class TreeIronwood extends TreeFamily {
 	

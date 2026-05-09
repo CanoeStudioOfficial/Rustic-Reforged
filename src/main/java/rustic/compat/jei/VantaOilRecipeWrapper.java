@@ -1,10 +1,6 @@
 package rustic.compat.jei;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.google.common.collect.Lists;
-
 import mezz.jei.api.gui.IGuiItemStackGroup;
 import mezz.jei.api.gui.IRecipeLayout;
 import mezz.jei.api.ingredients.IIngredients;
@@ -29,6 +25,9 @@ import rustic.common.items.ModItems;
 import rustic.common.util.ElixirUtils;
 import rustic.common.util.RusticUtils;
 import rustic.core.Rustic;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class VantaOilRecipeWrapper implements ICustomCraftingRecipeWrapper {
 	

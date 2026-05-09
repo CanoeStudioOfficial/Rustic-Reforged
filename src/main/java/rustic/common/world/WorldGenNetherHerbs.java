@@ -1,7 +1,5 @@
 package rustic.common.world;
 
-import java.util.Random;
-
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
@@ -10,6 +8,8 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import rustic.common.Config;
 import rustic.common.blocks.crops.BlockHerbBase;
 import rustic.common.blocks.crops.Herbs;
+
+import java.util.Random;
 
 public class WorldGenNetherHerbs extends WorldGenerator {
 

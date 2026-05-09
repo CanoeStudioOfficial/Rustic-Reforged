@@ -1,7 +1,5 @@
 package rustic.common.blocks.slab;
 
-import java.util.ArrayList;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.SoundType;
@@ -22,6 +20,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import rustic.core.Rustic;
+
+import java.util.ArrayList;
 
 public class BlockDoubleSlabBase extends BlockSlab {
 

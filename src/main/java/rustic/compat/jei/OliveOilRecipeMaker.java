@@ -1,13 +1,13 @@
 package rustic.compat.jei;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import rustic.common.Config;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 public final class OliveOilRecipeMaker {
 

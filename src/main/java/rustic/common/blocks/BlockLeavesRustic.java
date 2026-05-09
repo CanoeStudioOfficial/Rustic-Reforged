@@ -1,11 +1,5 @@
 package rustic.common.blocks;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
-import javax.annotation.Nullable;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.BlockPlanks;
@@ -45,6 +39,11 @@ import rustic.common.blocks.BlockPlanksRustic.EnumType;
 import rustic.common.items.ModItems;
 import rustic.core.ClientProxy;
 import rustic.core.Rustic;
+
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class BlockLeavesRustic extends BlockLeaves implements IColoredBlock {
 

@@ -4,7 +4,6 @@ import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.BlankRecipeWrapper;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
-import rustic.common.crafting.CrushingTubRecipe;
 import rustic.common.crafting.ICrushingTubRecipe;
 
 public class CrushingTubRecipeWrapper extends BlankRecipeWrapper {

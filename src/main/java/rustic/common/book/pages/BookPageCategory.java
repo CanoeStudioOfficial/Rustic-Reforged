@@ -1,8 +1,5 @@
 package rustic.common.book.pages;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.Gui;
@@ -18,6 +15,9 @@ import rustic.common.book.BookCategory;
 import rustic.common.book.BookEntry;
 import rustic.common.book.BookEntryCategory;
 import rustic.common.book.BookPage;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BookPageCategory extends BookPage {
 	

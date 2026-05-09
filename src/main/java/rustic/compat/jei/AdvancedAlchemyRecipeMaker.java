@@ -1,13 +1,11 @@
 package rustic.compat.jei;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import mezz.jei.api.IJeiHelpers;
-import rustic.common.crafting.AdvancedCondenserRecipe;
-import rustic.common.crafting.CondenserRecipe;
 import rustic.common.crafting.ICondenserRecipe;
 import rustic.common.crafting.Recipes;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AdvancedAlchemyRecipeMaker {
 

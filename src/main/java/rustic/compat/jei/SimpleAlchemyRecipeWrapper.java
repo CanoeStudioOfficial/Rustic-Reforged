@@ -1,12 +1,13 @@
 package rustic.compat.jei;
 
-import java.util.List;
-import java.util.ArrayList;
-import net.minecraft.item.ItemStack;
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.ingredients.VanillaTypes;
 import mezz.jei.api.recipe.IRecipeWrapper;
+import net.minecraft.item.ItemStack;
 import rustic.common.crafting.ICondenserRecipe;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SimpleAlchemyRecipeWrapper implements IRecipeWrapper {
 

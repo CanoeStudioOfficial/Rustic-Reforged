@@ -1,8 +1,5 @@
 package rustic.common.blocks.fluids;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
@@ -21,6 +18,9 @@ import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import rustic.common.potions.PotionsRustic;
 import rustic.common.util.RusticUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ModFluids {
 

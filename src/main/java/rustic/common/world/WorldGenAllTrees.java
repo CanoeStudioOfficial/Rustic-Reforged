@@ -1,7 +1,5 @@
 package rustic.common.world;
 
-import java.util.Random;
-
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
@@ -10,6 +8,8 @@ import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeDictionary.Type;
 import rustic.common.Config;
 import rustic.common.blocks.ModBlocks;
+
+import java.util.Random;
 
 public class WorldGenAllTrees extends WorldGenerator {
 	

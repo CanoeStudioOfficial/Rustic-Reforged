@@ -1,20 +1,19 @@
 package rustic.client.gui;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.lwjgl.opengl.GL11;
-
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.fluids.FluidStack;
+import org.lwjgl.opengl.GL11;
 import rustic.client.util.FluidClientUtil;
 import rustic.common.tileentity.ContainerCondenser;
 import rustic.common.tileentity.TileEntityCondenser;
 import rustic.core.Rustic;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GuiCondenser extends GuiContainer {
 

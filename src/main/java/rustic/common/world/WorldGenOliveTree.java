@@ -1,7 +1,5 @@
 package rustic.common.world;
 
-import java.util.Random;
-
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
@@ -11,6 +9,8 @@ import rustic.common.blocks.BlockLeavesRustic;
 import rustic.common.blocks.BlockLogRustic;
 import rustic.common.blocks.BlockPlanksRustic;
 import rustic.common.blocks.ModBlocks;
+
+import java.util.Random;
 
 public class WorldGenOliveTree extends WorldGenAbstractTree {
 

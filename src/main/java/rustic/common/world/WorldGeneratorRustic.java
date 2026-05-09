@@ -1,9 +1,6 @@
 package rustic.common.world;
 
-import java.util.Random;
-
 import com.google.common.base.Predicate;
-
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
@@ -16,6 +13,8 @@ import net.minecraftforge.fml.common.Loader;
 import rustic.common.Config;
 import rustic.common.blocks.ModBlocks;
 import rustic.compat.dynamictrees.DynamicTreesCompat;
+
+import java.util.Random;
 
 public class WorldGeneratorRustic implements IWorldGenerator {
 

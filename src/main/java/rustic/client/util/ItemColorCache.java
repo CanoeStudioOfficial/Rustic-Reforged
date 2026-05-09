@@ -1,12 +1,11 @@
 package rustic.client.util;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import net.minecraft.client.resources.IResourceManager;
 import net.minecraft.client.resources.IResourceManagerReloadListener;
 import net.minecraft.item.ItemStack;
-import rustic.client.util.ClientUtils;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class ItemColorCache implements IResourceManagerReloadListener {
 

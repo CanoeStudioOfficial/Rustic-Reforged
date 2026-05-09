@@ -1,14 +1,8 @@
 package rustic.common;
 
-import java.util.Random;
-
-import com.google.common.collect.Sets;
-
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.ai.EntityAITasks.EntityAITaskEntry;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.entity.player.EntityPlayer;
@@ -20,7 +14,6 @@ import net.minecraft.inventory.ContainerPlayer;
 import net.minecraft.inventory.ContainerWorkbench;
 import net.minecraft.inventory.InventoryCraftResult;
 import net.minecraft.inventory.InventoryCrafting;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemSoup;
 import net.minecraft.item.ItemStack;
@@ -30,9 +23,6 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.potion.PotionUtils;
 import net.minecraft.stats.StatList;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.EntityDamageSource;
-import net.minecraft.util.EntityDamageSourceIndirect;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.ResourceLocation;
@@ -40,9 +30,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
-import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -58,12 +46,13 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import rustic.common.blocks.ModBlocks;
 import rustic.common.crafting.RecipeOliveOil;
 import rustic.common.crafting.RecipeVantaOil;
-import rustic.common.entities.ai.EntityAITemptRustic;
 import rustic.common.items.ItemFluidBottle;
 import rustic.common.items.ModItems;
 import rustic.common.util.ElixirUtils;
 import rustic.common.util.RusticUtils;
 import rustic.core.Rustic;
+
+import java.util.Random;
 
 public class EventHandlerCommon {
 

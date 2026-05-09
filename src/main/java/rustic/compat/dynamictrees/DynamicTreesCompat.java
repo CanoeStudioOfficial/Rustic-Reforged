@@ -1,7 +1,5 @@
 package rustic.compat.dynamictrees;
 
-import java.util.ArrayList;
-
 import com.ferreusveritas.dynamictrees.ModConfigs;
 import com.ferreusveritas.dynamictrees.ModItems;
 import com.ferreusveritas.dynamictrees.ModRecipes;
@@ -17,7 +15,6 @@ import com.ferreusveritas.dynamictrees.blocks.LeavesProperties;
 import com.ferreusveritas.dynamictrees.items.DendroPotion.DendroPotionType;
 import com.ferreusveritas.dynamictrees.trees.Species;
 import com.ferreusveritas.dynamictrees.trees.TreeFamily;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.state.IBlockState;
@@ -43,6 +40,8 @@ import rustic.common.blocks.ModBlocks;
 import rustic.compat.dynamictrees.trees.TreeIronwood;
 import rustic.compat.dynamictrees.trees.TreeOlive;
 import rustic.core.Rustic;
+
+import java.util.ArrayList;
 
 public class DynamicTreesCompat {
 	

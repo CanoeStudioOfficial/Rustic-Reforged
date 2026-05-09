@@ -1,8 +1,6 @@
 package rustic.common.crafting;
 
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fluids.FluidStack;
-import rustic.common.blocks.fluids.FluidBooze;
 
 public interface IBrewingBarrelRecipe {
 	public FluidStack getInput();

@@ -1,16 +1,6 @@
 package rustic.compat.jei;
 
-import java.util.ArrayList;
-import javax.annotation.Nullable;
-
-import mezz.jei.api.IGuiHelper;
-import mezz.jei.api.IJeiHelpers;
-import mezz.jei.api.IJeiRuntime;
-import mezz.jei.api.IModPlugin;
-import mezz.jei.api.IModRegistry;
-import mezz.jei.api.IRecipeRegistry;
-import mezz.jei.api.ISubtypeRegistry;
-import mezz.jei.api.JEIPlugin;
+import mezz.jei.api.*;
 import mezz.jei.api.recipe.VanillaRecipeCategoryUid;
 import net.minecraft.item.ItemStack;
 import rustic.client.gui.GuiBrewingBarrel;
@@ -18,12 +8,11 @@ import rustic.client.gui.GuiCondenser;
 import rustic.client.gui.GuiCondenserAdvanced;
 import rustic.common.Config;
 import rustic.common.blocks.ModBlocks;
-import rustic.common.crafting.IBrewingBarrelRecipe;
-import rustic.common.crafting.ICondenserRecipe;
-import rustic.common.crafting.ICrushingTubRecipe;
-import rustic.common.crafting.IEvaporatingBasinRecipe;
-import rustic.common.crafting.Recipes;
+import rustic.common.crafting.*;
 import rustic.common.items.ModItems;
+
+import javax.annotation.Nullable;
+import java.util.ArrayList;
 
 @JEIPlugin
 public class RusticJEIPlugin implements IModPlugin {

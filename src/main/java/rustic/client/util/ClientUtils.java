@@ -1,11 +1,6 @@
 package rustic.client.util;
 
-import java.util.UUID;
-
-import org.lwjgl.opengl.GL11;
-
 import com.mojang.authlib.GameProfile;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.Tessellator;
@@ -18,7 +13,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.TextFormatting;
+import org.lwjgl.opengl.GL11;
 import rustic.core.Rustic;
+
+import java.util.UUID;
 
 public class ClientUtils {
 	

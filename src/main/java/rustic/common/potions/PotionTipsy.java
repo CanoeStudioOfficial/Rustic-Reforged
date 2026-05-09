@@ -1,12 +1,12 @@
 package rustic.common.potions;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PotionTipsy extends PotionBase {
 	

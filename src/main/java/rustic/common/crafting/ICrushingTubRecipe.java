@@ -1,7 +1,6 @@
 package rustic.common.crafting;
 
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 
 public interface ICrushingTubRecipe {

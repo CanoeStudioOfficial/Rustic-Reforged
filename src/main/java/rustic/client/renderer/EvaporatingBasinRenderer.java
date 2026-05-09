@@ -1,9 +1,5 @@
 package rustic.client.renderer;
 
-import java.util.Random;
-
-import org.lwjgl.opengl.GL11;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.GlStateManager;
@@ -20,8 +16,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
+import org.lwjgl.opengl.GL11;
 import rustic.client.util.FluidClientUtil;
 import rustic.common.tileentity.TileEntityEvaporatingBasin;
+
+import java.util.Random;
 
 public class EvaporatingBasinRenderer extends TileEntitySpecialRenderer<TileEntityEvaporatingBasin> {
 

@@ -1,11 +1,5 @@
 package rustic.common.blocks.crops;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
-import javax.annotation.Nullable;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.SoundType;
@@ -43,6 +37,11 @@ import rustic.common.blocks.IColoredBlock;
 import rustic.common.blocks.ModBlocks;
 import rustic.core.ClientProxy;
 import rustic.core.Rustic;
+
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public abstract class BlockBerryBush extends BlockBase implements IColoredBlock, IPlantable, IGrowable {
 

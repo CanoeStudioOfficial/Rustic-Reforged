@@ -1,17 +1,8 @@
 package rustic.core;
 
-import java.io.File;
-import java.net.URL;
-import java.net.URLClassLoader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
-
 import net.minecraft.block.BlockDispenser;
 import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.item.Item;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.World;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fluids.FluidRegistry;
@@ -35,6 +26,9 @@ import rustic.common.potions.PotionsRustic;
 import rustic.common.util.DispenseRope;
 import rustic.common.world.WorldGeneratorRustic;
 import rustic.compat.Compat;
+
+import java.io.File;
+import java.util.Set;
 
 public class CommonProxy {
 	

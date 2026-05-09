@@ -1,13 +1,13 @@
 package rustic.client.renderer;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.client.renderer.vertex.VertexFormat;
 import net.minecraft.client.renderer.vertex.VertexFormatElement;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import java.util.ArrayList;
+import java.util.List;
 
 //OLDMODEL_POSITION_TEX_NORMAL
 @SideOnly(Side.CLIENT)

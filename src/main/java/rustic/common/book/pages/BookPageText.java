@@ -1,10 +1,5 @@
 package rustic.common.book.pages;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.Gui;
@@ -18,6 +13,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import rustic.client.gui.book.GuiBook;
 import rustic.common.book.BookEntry;
 import rustic.common.book.BookPage;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class BookPageText extends BookPage {
 
